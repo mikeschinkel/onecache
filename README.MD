@@ -38,14 +38,14 @@ var store onecache.Store
 
 store = filesystem.MustNewFSStore("/home/adez/onecache_tmp")
 
-err := store.Set("config", []byte("Lanre"), time.Second*6000)
+err := store.Set("profile", []byte("Lanre"), time.Second*60)
 
 if err != nil {
 	fmt.Println(err)
 	return
 }
 
-value,err := store.Get("config")
+value,err := store.Get("profile")
 if err != nil {
 	fmt.Println(err)
 	return
